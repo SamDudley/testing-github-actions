@@ -2,5 +2,6 @@ flavours = [
     "coffee",
     "carrot",
     "chocolate",
-    'lemon'
+    "lemon",
+    "victoria",
 ]
