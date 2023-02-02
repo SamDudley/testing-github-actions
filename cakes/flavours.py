@@ -5,3 +5,7 @@ flavours = [
     "lemon",
     "victoria",
 ]
+
+
+def get_flavours() -> list[str]:
+    return flavours
