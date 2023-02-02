@@ -11,4 +11,4 @@ COPY . .
 
 RUN poetry install
 
-CMD ["print-cakes"]
+ENTRYPOINT ["print-cakes"]

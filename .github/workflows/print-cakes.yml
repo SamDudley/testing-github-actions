@@ -1,0 +1,12 @@
+name: Print cakes
+
+on: [push]
+
+jobs:
+  print_cakes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print cake flavours
+        id: cake-flavours
+        uses: SamDudley/testing-github-actions@slide-8

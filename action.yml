@@ -1,0 +1,9 @@
+name: Cakes
+description: Print cake flavours
+outputs:
+  cake-flavours:
+    description: The flavours of cakes
+runs:
+  using: docker
+  image: Dockerfile
+  entrypoint: "/app/entrypoint.sh"
