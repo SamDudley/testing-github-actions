@@ -1,0 +1,5 @@
+flavours = [
+    "coffee",
+    "carrot",
+    "chocolate",
+]
