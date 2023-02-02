@@ -1,8 +1,8 @@
-from .flavours import flavours
+from .flavours import get_flavours
 
 
-def main():
+def main() -> None:
     print("Here are some cake flavours:")
 
-    for flavour in flavours:
+    for flavour in get_flavours():
         print(f"  - {flavour}")
