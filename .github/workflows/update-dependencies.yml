@@ -1,0 +1,33 @@
+name: Update dependencies
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  update_dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install poetry
+        run: pip install poetry
+
+      - name: Install python dependencies
+        run: poetry install
+
+      - name: Update python dependencies
+        run: poetry update
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          base: ${{ github.head_ref }}
